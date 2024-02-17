@@ -1,17 +1,17 @@
 #pragma once
 
-#include <initializer_list>
+
 namespace hck2d2024 {
 
 
 class Point {
-
+    double x_;
+    double y_;
+    
 public:
     Point(double x, double y);
 
     Point(const Point &pt);
-
-    Point(double coords[2]);
 
     double x() const;
 

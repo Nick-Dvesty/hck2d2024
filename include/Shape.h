@@ -1,5 +1,6 @@
 #pragma once
 
+
 #include <initializer_list>
 #include "Point.h"
 #include <vector>
@@ -9,6 +10,7 @@ namespace hck2d2024 {
 
 
 class Shape {
+    std::vector<Point> points_;
 
 public:
     Shape(std::initializer_list<Point> pts);
@@ -23,12 +25,9 @@ public:
 
     size_t numVertices() const;
 
-    Point operator[](size_t idx) const;
+    Point &operator[](size_t idx);
 
     Shape &operator=(const Shape &sh);
-    Shape &operator=(Shape &&sh);
-    Shape &operator=(const std::vector<Point> &pts);
-    Shape &operator=(std::vector<Point> &&pts);
 };
 
 
